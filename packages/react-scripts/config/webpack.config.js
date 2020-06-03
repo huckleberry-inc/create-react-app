@@ -378,6 +378,9 @@ module.exports = function (webpackEnv) {
             },
           ],
           include: paths.appSrc,
+          resolve: {
+            symlinks: false,
+          },
         },
         {
           // "oneOf" will traverse all following loaders until one will
@@ -583,6 +586,9 @@ module.exports = function (webpackEnv) {
             // ** STOP ** Are you adding a new loader?
             // Make sure to add the new loader(s) before the "file" loader.
           ],
+          resolve: {
+            symlinks: false,
+          },
         },
       ],
     },
